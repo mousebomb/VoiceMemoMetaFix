@@ -42,8 +42,13 @@ function fixMetadata(inputFullpath,filename)
 
 
 listFile($inputFolder);
-console.log(list);
+// console.log(list);
 
 
-console.log(cmd);
-exec(cmd);
+if ( list && cmd ) {
+  console.log(cmd);
+  exec(cmd);
+}
+else{
+  console.log("无文件");
+}
